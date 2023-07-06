@@ -64,3 +64,86 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# programmer force tasks 
+# Attendance System
+
+The Attendance System is a Laravel project that allows tracking and managing employee attendance. It includes functionality to start and end attendance, calculate working hours, and check working hours completion.
+
+## Installation
+
+1. Clone the repository:
+git clone https://github.com/farhanqadeer147/hit_Aapi-get-data-and-calculate-working-hours.git
+
+2. Navigate to the project directory:
+cd hit_Aapi-get-data-and-calculate-working-hours
+# composer install
+
+4. Configure the database settings in the `.env` file.
+
+5. Run the database migrations:
+php artisan migrate
+
+6. Generate the application key:
+php artisan key:generate
+
+7. Start the development server:
+php artisan serve
+
+## API Endpoints
+
+### `POST /api/attendance/start`
+
+Starts the attendance for a user.
+
+### `POST /api/attendance/end`
+
+Ends the attendance for a user and calculates the total hours worked.
+
+### `GET /api/attendance/calculate`
+
+Calculates the total time worked for a user.
+
+### `GET /api/attendance/check-working-hours`
+
+Checks if the working hours are completed for a user.
+
+## Controllers
+
+### `APIController.php`
+
+- `calculateHours(Request $request)`: Retrieves data from an external API, calculates the total working hours for each employee, and returns the results.
+
+### `AttendanceController.php`
+
+- `start(Request $request)`: Starts the attendance for a user by saving the IP address, email, and start time.
+- `end(Request $request)`: Ends the attendance for a user by saving the end time, calculating the total hours worked, and updating the attendance status.
+- `calculate(Request $request)`: Calculates the total time worked for a user.
+- `checkWorkingHours(Request $request)`: Checks if the working hours are completed for a user.
+
+### `Controller.php`
+
+- This is the base controller class extended by other controllers in the project.
+
+### `LoginTimeController.php`
+
+- `index()`: Returns a sample array of attendance data.
+
+## Credits
+
+- [Guzzle HTTP Client](https://github.com/guzzle/guzzle): Used for making HTTP requests to the external API.
+
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## Contact
+
+For any inquiries or questions regarding the Attendance System project, please contact the project owner:
+
+- [GitHub Repository](https://github.com/farhanqadeer147/hit_Aapi-get-data-and-calculate-working-hours)
+ 
+
+
+[Specify the license under which your project is distributed]
+
+
