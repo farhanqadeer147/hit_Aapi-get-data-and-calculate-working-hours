@@ -1,0 +1,15 @@
+services:
+  database:
+    image: mysql
+    ports:
+      - 8000:8000
+    environment:
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}  # Specify your root password here
+    volumes:
+      - db_database:/var/lib/mysql
+
+volumes:
+  db_database:
